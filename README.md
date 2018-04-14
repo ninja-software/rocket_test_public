@@ -4,7 +4,7 @@ SpaceX have forgotten to build a control system for their next rocket!
 
 They just realised this small problem while the rocket was in flight, so your mission to is quickly build one in ReactJS.
 
-![](rocket.jpg)
+![](rocket2.jpg)
 
 # Endpoints
 
