@@ -1,0 +1,71 @@
+{
+  "extends": "react-app",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "valid-jsdoc": 0,
+    "no-underscore-dangle": ["error", { "allowAfterSuper": true, "allowAfterThis": true}],
+    "max-len": ["error", 160],
+    "newline-per-chained-call": 0,
+    "object-property-newline": 0,
+    "quotes": [1, "double", "avoid-escape"],
+    "comma-dangle": 0,
+    "func-names": 0,
+    "spaced-comment": 0,
+    "space-before-function-paren": 0,
+    "key-spacing": 0,
+    "no-multiple-empty-lines": 0,
+    "semi": 0,
+    "strict": 0,
+    "indent": 0,
+    "prefer-const": 0,
+    "new-cap": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "no-var": 0,
+    "vars-on-top": 0,
+    "block-scoped-var": 0,
+    "padded-blocks": 0,
+    "flowtype/define-flow-type": 1,
+    "flowtype/require-parameter-type": 1,
+    "flowtype/space-after-type-colon": [
+      1,
+      "always"
+    ],
+    "flowtype/space-before-type-colon": [
+      1,
+      "never"
+    ],
+    "flowtype/type-id-match": [
+      1,
+      "^([A-Z][a-z0-9]+)+Type$"
+    ],
+    "flowtype/use-flow-type": 1,
+    "flowtype/valid-syntax": 1
+  },
+
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+
+
+  "plugins": [
+    "react",
+    "flowtype"
+  ]
+}

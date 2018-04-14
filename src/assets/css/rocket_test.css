@@ -1,0 +1,149 @@
+#World {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/sky.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#World #Ocean {
+	bottom: 0;
+	left: 0;
+	height: 200px;
+	position: fixed;
+	z-index: 8999;
+}
+
+#World #FlySpace {
+	width: 1000px;
+	height: 1000px;
+	bottom: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	z-index: 9000;
+}
+
+#World #FlySpace #Barge {
+	position: absolute;
+	bottom: -90px;
+	left: -193px;
+
+	transform: translateX(-50%);
+	-webkit-animation-name: hvr-bob-float, hvr-bob;
+	animation-name: hvr-bob-float, hvr-bob;
+	-webkit-animation-duration: 0.3s, 1.5s;
+	animation-duration: 0.3s, 1.5s;
+	-webkit-animation-delay: 0s, 0.3s;
+	animation-delay: 0s, 0.3s;
+	-webkit-animation-timing-function: ease-out, ease-in-out;
+	animation-timing-function: ease-out, ease-in-out;
+	-webkit-animation-iteration-count: 1, infinite;
+	animation-iteration-count: 1, infinite;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-direction: normal, alternate;
+	animation-direction: normal, alternate;
+}
+
+#MetricsSystem {
+	position: fixed;
+	top: 100px;
+	left: 100px;
+	width: 250px;
+	height: 500px;
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	padding: 20px;
+}
+
+#ControlSystem {
+	position: fixed;
+	top: 100px;
+	right: 100px;
+	width: 250px;
+	height: 500px;
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	padding: 20px;
+}
+
+#ControlSystem h2 {
+	text-align: center;
+}
+
+.rocket-wrapper {
+	position: absolute;
+	left: 50%;
+	z-index: 9001;
+	transition: all 100ms linear;
+	height: 99px;
+	overflow: visible;
+}
+
+.rocket {
+	width: 37px;
+	height: auto;
+}
+
+.trail-wrapper {
+	position: absolute;
+	top: 99px;
+	left: 13px;
+	width: 12px;
+	height: 44px;
+	transform: none;
+	transform-origin: top center;
+	z-index: -1;
+}
+
+.explosion-wrapper {
+	position: absolute;
+	top: -10px;
+	left: -40px;
+	width: 94px;
+	height: 91px;
+	zoom: 2;
+	transform: none;
+	transform-origin: top center;
+	z-index: 2;
+}
+
+.flame-sprite {
+	position: absolute;
+	top: -15px;
+	left: 8px;
+}
+
+.trail {
+	width: 12px;
+	height: auto;
+	transform: translateZ(0);
+	animation: jet 0.02s ease alternate infinite;
+	transform-origin: top center;
+}
+
+@keyframes jet {
+	0% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1.2);
+	}
+}
+
+@-webkit-keyframes hvr-bob-float {
+	100% {
+		-webkit-transform: translateY(-8px);
+		transform: translateY(-8px);
+	}
+}
+@keyframes hvr-bob-float {
+	100% {
+		-webkit-transform: translateY(-8px);
+		transform: translateY(-8px);
+	}
+}
